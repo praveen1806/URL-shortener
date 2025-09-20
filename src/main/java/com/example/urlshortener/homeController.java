@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class homeController {
-	private final basicService Bs;
+	private final basicService bs;
 	public homeController(basicService bs) {
-		this.Bs=bs;
+		this.bs=bs;
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -21,7 +21,7 @@ public class homeController {
 	}
 	@PostMapping("/shorten")
 	public String handleShorten(@RequestParam String longUrl,Model model) {
-		String code = Bs.shortenUrl(longUrl);
+		String code = bs.shortenUrl(longUrl);
 		model.addAttribute("shortened", "localhost:8080/"+code);
 		return "shorten";
 	}
