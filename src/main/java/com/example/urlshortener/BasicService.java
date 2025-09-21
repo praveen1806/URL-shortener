@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.stereotype.Service;
 @Service
-public class basicService {
+public class BasicService {
 	private static final String ALPHABET = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 	private static final int CODE_LEN = 6;
 	private static final SecureRandom random = new SecureRandom();
